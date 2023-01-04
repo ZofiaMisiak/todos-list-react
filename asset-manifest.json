@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ZofiaMisiak/todos-list-react/static/css/main.b7e67f2d.css",
+    "main.js": "/ZofiaMisiak/todos-list-react/static/js/main.09fdb115.js",
+    "static/js/787.3cda3113.chunk.js": "/ZofiaMisiak/todos-list-react/static/js/787.3cda3113.chunk.js",
+    "index.html": "/ZofiaMisiak/todos-list-react/index.html",
+    "main.b7e67f2d.css.map": "/ZofiaMisiak/todos-list-react/static/css/main.b7e67f2d.css.map",
+    "main.09fdb115.js.map": "/ZofiaMisiak/todos-list-react/static/js/main.09fdb115.js.map",
+    "787.3cda3113.chunk.js.map": "/ZofiaMisiak/todos-list-react/static/js/787.3cda3113.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7e67f2d.css",
+    "static/js/main.09fdb115.js"
+  ]
+}
