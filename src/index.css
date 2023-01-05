@@ -10,7 +10,7 @@ html {
   box-sizing: inherit;
 }
 
-.body {
+.root {
   font-family: 'Montserrat', sans-serif;
   background: #eee
 }
