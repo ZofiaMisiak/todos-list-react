@@ -6,10 +6,6 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
-const tasks = [
-  { id: 1, content: "Przejść na Reacta", done: false },
-  { id: 2, content: "Zjeść obiad", done: true },
-];
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -23,11 +19,11 @@ function App() {
   };
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
-  }
+  };
+
   return (
     <Container>
       <Header title="Lista zadań" />
-
       <Section
         title="Dodaj nowe zadanie"
         body={<Form />}
