@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -8,14 +8,15 @@ import Container from "./Container";
 
 const getInitialTasks = () => {
   const tasksFromLocalStorage = localStorage.getItem("tasks");
+
   return  tasksFromLocalStorage !== null
   ? JSON.parse(tasksFromLocalStorage)
-  :[]
+  :[];
 };
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState();
+  const [tasks, setTasks] = useState(getInitialTasks);
 
 useEffect(() => {
   localStorage.setItem("tasks", JSON.stringify(tasks));
