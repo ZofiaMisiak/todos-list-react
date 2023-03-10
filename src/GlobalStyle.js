@@ -14,4 +14,4 @@ export const GlobalStyle = createGlobalStyle `
         font-family: 'Montserrat', sans-serif;
         background: ${({ theme }) => theme.color.gallery};
     }
-    `;b
+    `;

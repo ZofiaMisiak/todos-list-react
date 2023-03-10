@@ -39,5 +39,5 @@
 
 .form__button:hover {
   transform: scale(1.05);
-  background-color: hsl(180, 100%, 30%);
+  background-color: #009999;
 }

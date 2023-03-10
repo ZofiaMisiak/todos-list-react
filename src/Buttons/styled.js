@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -11,8 +11,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Button = styled.button`
-  background-color: white;
-  color: teal;
+  background: transparent;
+  color: ${({ theme }) => theme.color.teal};
   border: none;
   transition: 1s;
   cursor: pointer;
