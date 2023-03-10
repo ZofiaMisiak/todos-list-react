@@ -1,29 +1,27 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-  width: 100%;
-  @media (max-width: 767px) {
-    margin-bottom: 8px;
+export const ListButtons = styled.div`
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    @media (max-width: ${({theme}) => theme.breakpoint.phone}px){
+        grid-template-columns: auto;
+        justify-content: center;
+        grid-gap: 15px;
+    }
 `;
 
 export const Button = styled.button`
-  background: transparent;
-  color: ${({ theme }) => theme.color.teal};
-  border: none;
-  transition: 1s;
-  cursor: pointer;
-  &:hover {
-    color: hsl(180, 100%, 30%);
-  }
-  ${({disabled}) => disabled && css`
-    color: lightgray;
-    cursor: auto;
+    border: none;
+    background-color: transparent;
+    color: ${({theme}) => theme.color.teal};
+    transition: color 0.8s;
+    font-size: 15px;
     &:hover {
-      color: lightgray;
+        filter: brightness(110%);
     }
-  `}
+    &:disabled {
+        color: ${({theme}) => theme.color.silver};
+        cursor: default;
+    }
 `;

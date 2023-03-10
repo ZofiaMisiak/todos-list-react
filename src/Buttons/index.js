@@ -1,23 +1,23 @@
-import { Wrapper, Button } from "./styled.js";
+import { ListButtons, Button } from "./styled";
 
-const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => {
-  if (tasks.length === 0) {
-    return null;
-  }
+const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
 
-  return (
-    <Wrapper>
-      <Button onClick={toggleHideDone}>
-        {hideDone ? "Pokaż" : "Ukryj"} ukończone
-      </Button>
-      <Button
-        onClick={setAllDone}
-        disabled={tasks.every(({ done }) => done)}
-      >
-        Ukończ wszystkie
-      </Button>
-    </Wrapper>
-  );
-};
+  <ListButtons>
+    {tasks.length > 0 && (
+      <>
+        <Button
+          onClick={toggleHideDone} >
+          {hideDone ? "Pokaż ukończone" : "Ukryj ukończone"}
+        </Button>
+        <Button
+          onClick={setAllDone}
+          disabled={tasks.every(({ done }) => done)}
+          >
+          Ukończ wszystkie
+        </Button>
+      </>
+    )}
+  </ListButtons>
+);
 
 export default Buttons;
